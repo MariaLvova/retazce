@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
+#pragma warning (disable:4996)
 
 void generateCombinations(char* result, int index, int n, int l) {
     if (index == l) {
@@ -26,9 +27,14 @@ void retazce(char n, char l) {
 }
 
 int main() {
-    char n = 3;  // počet písmen (napr. 'a', 'b', 'c')
-    char l = 2;  // dĺžka reťazcov
+    int n, l;
 
-    retazce(n, l);
+    printf("Zadajte pocet prvych malych pismen latinskej abecedy (n): ");
+    scanf("%d", &n);
+
+    printf("Zadajte dlzku retazcov (l): ");
+    scanf("%d", &l);
+
+    retazce((char)n, (char)l);
     return 0;
 }
