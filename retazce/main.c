@@ -24,3 +24,11 @@ void retazce(char n, char l) {
     generateCombinations(result, 0, n, l);
     free(result);
 }
+
+int main() {
+    char n = 3;  // počet písmen (napr. 'a', 'b', 'c')
+    char l = 2;  // dĺžka reťazcov
+
+    retazce(n, l);
+    return 0;
+}
